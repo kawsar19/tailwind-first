@@ -6,16 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+     .w-72 {
+       background: red;
+       transition: width .3s ease-in-out;
+     }
+    .w-20 {
+      background: green;
+      transition: width .3s ease-in-out;
+
+    }
+    </style>
 </head>
 <body>
     <div class="flex">
-        <div class="sidebar bg-primary h-screen w-72">
+        <div class="sidebar bg-primary h-screen w-20 overflow-hidden" id="sidebar">
           <div>
             <div class="flex items-center justify-end gap-10 pr-8">
               <a href="#">
                 <img src="https://i.ibb.co/zP8bv3T/logo.png" alt="" class="w-20" />
               </a>
-              <div class="flex cursor-pointer flex-col gap-1">
+              <div class="flex cursor-pointer flex-col gap-1" onclick="test()">
                 <span class="inline-block h-1 w-5 bg-black"></span>
                 <span class="inline-block h-1 w-5 bg-black"></span>
                 <span class="inline-block h-1 w-5 bg-black"></span>
@@ -56,6 +67,20 @@
      }
             }
           }
+        }
+      </script>
+      
+      <script>
+        function test() {
+          const sidebar=document.getElementById('sidebar');
+          if(sidebar.classList.contains('w-72')) {
+            sidebar.classList.remove('w-72')
+            sidebar.classList.add('w-20')
+          }else {
+             sidebar.classList.remove('w-20')
+             sidebar.classList.add('w-72')
+          }
+          
         }
       </script>
     

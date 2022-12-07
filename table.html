@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+   .container {
+     padding: 1rem;
+   }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+    
+    table {
+      width: 100%;
+
+      border-collapse: collapse;
+    }
+
+    td {
+
+      border: 1px solid #ccc;
+      text-align: center;
+      min-width: 120px;
+      padding: 20px 20px;
+    }
+
+    tr:nth-of-type(1) td {
+      border-top: none;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <td>item</td>
+
+          <td colspan="2">Successfulky completed</td>
+          <td colspan="2">Total order completed</td>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+          <td colspan="2">item</td>
+        </tr>
+        <tr>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+          <td>item</td>
+        </tr>
+      </table>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
